@@ -9,7 +9,9 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        return str = str.substring(0, 1).toUpperCase() + str.substring(1);
+
+
     }
 
     /**
@@ -17,7 +19,12 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            result.append(str.charAt(i));
+        }
+        return (result.toString());
     }
 
     /**
@@ -25,7 +32,14 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            result.append(str.charAt(i));
+        }
+        str = (result.toString());
+
+        return str = str.substring(0, 1).toUpperCase() + str.substring(1);
     }
 
 
@@ -34,7 +48,11 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+
+        String result = str.substring(0, 0) + str.substring(0 + 1);
+        str = result.substring(0, result.length() - 1) + result.substring(result.length() - 1 + 1);
+        return str;
+
     }
 
     /**
@@ -42,6 +60,16 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (char letter : str.toCharArray()) {
+            if (Character.isUpperCase(letter)){
+                letter = Character.toLowerCase(letter);
+            } else {
+               letter = Character.toUpperCase(letter);
+            }
+            sb.append(letter);
+
+        }
+        return sb.toString();
     }
 }
