@@ -6,6 +6,9 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+        Integer attempts = 0;
+
+
+        return attempts;
     }
 }
