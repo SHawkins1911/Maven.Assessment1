@@ -3,8 +3,6 @@ package com.zipcodewilmington.assessment1.part2;
 /**
  * Created by leon on 2/16/18.
  */
-import java.util.Collections;
-import java.util.*;
 public class StringUtils {
 
     /**
@@ -73,8 +71,9 @@ public class StringUtils {
      */
     public static String removeCharacterAtIndex(String str, int index) {
 
-        str = str.substring(0,2) + str.substring(2 + str.length()-1);
-        return str;
+        String parStr1 = str.substring(0,2);
+        String parStr2 = str.substring(3, str.length());
+        return parStr1 + parStr2;
     }
 
 }
